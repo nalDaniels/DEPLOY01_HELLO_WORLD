@@ -4,14 +4,18 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-        sh "echo Run a command"
+        sh "touch build.txt"
      }
    }
-    stage ('test') {
+    stage ('Test') {
       steps {
-        sh "echo Run a command"
+        sh "touch test.txt"
       }
-    
+    }
+     stage ('Deploy') {
+      steps {
+        sh "echo You did it!"
+      }
     }
   }
 }
